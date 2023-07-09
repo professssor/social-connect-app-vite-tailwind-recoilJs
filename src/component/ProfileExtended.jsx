@@ -20,7 +20,7 @@ function ProfileExtended() {
   const { setAuth, user } = useAuth();
   const [userFilteredPost, setUserFilteredPost] = useState([]);
   const [shouldFetch, setShouldFetch] = useRecoilState(shouldFetchAtom);
-  const [editMode, setEditMode] = useRecoilState(EditProfileAtomofileAtom);
+  const [editMode, setEditMode] = useRecoilState(EditProfileAtom);
   const [bio, setBio] = useRecoilState(BioDataAtom);
   const [githubLink, setGithubLink] = useRecoilState(LinkDataAtom);
 
