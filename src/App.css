@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  body {
+    background-color: #1e1e1e;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #161616;
+  }
+  ::-webkit-scrollbar-thumb {
+    width: 70%;
+    border-radius: 3rem;
+    background-color: #ffd93d;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-track-piece {
+    border-radius: 3rem;
+    background-color: #282828;
+  }
+  /* for text in the nav of sidebar */
+  .navText {
+    display: inline-flex;
+    color: white;
+  }
+
+  .optionContainer {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+  .optionContainer > * {
+    margin: 0.3rem;
+    color: #ffd93d;
+  }
+  .optionContainer:hover {
+    border-radius: 4rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  /* icons of the post creating page  */
+  .postIcons {
+    display: flex;
+    background: #282828;
+
+    padding: 0.3rem;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .postIcons > * {
+    margin: 0.3rem;
+  }
+  .postIcons:hover {
+    background: #161616;
+  }
+}
