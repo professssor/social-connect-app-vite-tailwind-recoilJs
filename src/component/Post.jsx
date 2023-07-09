@@ -9,7 +9,7 @@ import { addNewPost } from "../Services/PostService";
 import { useEffect } from "react";
 import shouldFetchAtom from "../atom/ShouldFetchAtom";
 import { useAuth } from "../Services/AuthService";
-import { Toaster, toast } from "react-hot-toast";
+
 import PostAlert from "../atom/PostAlert";
 import LoggedUserProfileDataAtom from "../atom/LoggedUserProfileDataAtom";
 function Post() {
@@ -49,7 +49,6 @@ function Post() {
           selectedVideoUrl
         );
       } catch (error) {
-        toast.error("This didn't work.");
         console.log("Error posting the new post:", error);
       }
     }

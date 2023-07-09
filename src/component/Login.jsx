@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useRecoilState } from "recoil";
 import loginState from "../atom/LoginStateAtom";
 import { useAuth } from "../Services/AuthService";
-import { Toaster } from "react-hot-toast";
 
 function Login() {
   const { handleLogin } = useAuth();
