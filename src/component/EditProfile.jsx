@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import EditProfileAtom from "../atom/editProfileAtom";
+
 import { useRecoilState } from "recoil";
 import BioDataAtom from "../atom/BioDataAtom";
 import LinkDataAtom from "../atom/LinkDataAtom";
 import { editUserDetails } from "../Services/userService";
+import EditProfileAtom from "../atom/EditProfileAtom";
 function EditProfile({ imageData }) {
   const [bio, setBio] = useRecoilState(BioDataAtom);
   const [githubLink, setGithubLink] = useRecoilState(LinkDataAtom);
