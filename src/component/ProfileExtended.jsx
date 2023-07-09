@@ -10,9 +10,9 @@ import ToggleProfileAtom from "../atom/ToggleProfileAtom";
 import { getuserById } from "../Services/userService";
 import shouldFetchAtom from "../atom/ShouldFetchAtom";
 import EditProfile from "./EditProfile";
-import EditProfileAtom from "../atom/editProfileAtom";
 import BioDataAtom from "../atom/BioDataAtom";
 import LinkDataAtom from "../atom/LinkDataAtom";
+import EditProfileAtom from "../atom/EditProfileAtom";
 
 function ProfileExtended() {
   const [profileCardState, setProfileCardState] =
@@ -20,7 +20,7 @@ function ProfileExtended() {
   const { setAuth, user } = useAuth();
   const [userFilteredPost, setUserFilteredPost] = useState([]);
   const [shouldFetch, setShouldFetch] = useRecoilState(shouldFetchAtom);
-  const [editMode, setEditMode] = useRecoilState(EditProfileAtom);
+  const [editMode, setEditMode] = useRecoilState(EditProfileAtomofileAtom);
   const [bio, setBio] = useRecoilState(BioDataAtom);
   const [githubLink, setGithubLink] = useRecoilState(LinkDataAtom);
 
