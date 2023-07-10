@@ -18,6 +18,7 @@ export const users = [
     link: "https://github.com/professssor",
     createdAt: formatDate(),
     updatedAt: formatDate(),
+    followers: [],
     following: [
       {
         _id: uuid(),

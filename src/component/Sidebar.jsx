@@ -11,6 +11,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import bookmarkClicked from "../atom/bookmarkClicked";
 import PostAlert from "../atom/PostAlert";
 import OtherUsersProfileAtom from "../atom/OtherUsersProfileAtom";
+import LoggedUserProfileDataAtom from "../atom/LoggedUserProfileDataAtom";
 function Sidebar() {
   const [profileCardState, setProfileCardState] =
     useRecoilState(ProfileCardAtom);
@@ -18,6 +19,9 @@ function Sidebar() {
   const [postAlert, setPostAlert] = useRecoilState(PostAlert);
   const [otherUserProfileState, setOtherUserProfileState] = useRecoilState(
     OtherUsersProfileAtom
+  );
+  const [loggedUserData, setLoggedUserData] = useRecoilState(
+    LoggedUserProfileDataAtom
   );
   const navigate = useNavigate();
 
@@ -29,7 +33,11 @@ function Sidebar() {
      text-red-700  justify-start w-fit  items-center  md:w-[8rem] lg:w-[50%] "
     >
       <div className="p-4 ">
-        <SailingIcon className="text-4xl" />
+        <img
+          className="h-16 w-16 p-3 md:p-1 "
+          src="https://img.icons8.com/ios-filled/50/FAB005/share-2.png"
+          alt="share-2"
+        />
       </div>
       {/* navigation/ feature section  */}
       <div className="flex flex-col justify-start mt-6 space-y-6 text-[1.3rem] h-[100%] p-2 md:p-10   md:items-left">
@@ -61,7 +69,7 @@ function Sidebar() {
         >
           <Person2Icon />
 
-          <span className="hidden lg:navText">Profile</span>
+          <span className="hidden lg:navText">Explore</span>
         </p>
         {/* <p
           onClick={() => {
@@ -83,9 +91,16 @@ function Sidebar() {
           }}
           className="optionContainer"
         >
-          <AccountCircleIcon className="text-blue-500" />
+          {/* <AccountCircleIcon className="text-blue-500" /> */}
 
-          <span className="hidden lg:navText">Details</span>
+          <img
+            className="  h-9 w-9 rounded-full bg-[#F5F5F5]"
+            src={`${
+              loggedUserData?.avatar ||
+              "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
+            }`}
+          />
+          <span className="hidden lg:navText ">Details</span>
         </p>
       </div>
     </div>
