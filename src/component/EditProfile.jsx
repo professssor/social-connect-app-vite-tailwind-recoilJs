@@ -42,7 +42,10 @@ function EditProfile({ imageData }) {
       </h2>
       {/*  image render to be edited and changed  */}
       <img
-        src={profileImage}
+        src={
+          profileImage ||
+          "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
+        }
         alt=""
         className="rounded-full h-[7rem] w-[7rem]"
       />
