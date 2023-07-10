@@ -76,20 +76,25 @@ function ProfileCard() {
           <strong>{followingCount}</strong> following
         </p>
         {/* github url */}
-        <a href={loggedUserData?.link} className="text-gray-400 text-sm mt-2">
-          <span>Github :</span>
-          <span className="text-green-400 text-md">
-            {" "}
-            {loggedUserData?.link}
-          </span>
-        </a>
+        {loggedUserData?.link && (
+          <a href={loggedUserData?.link} className="text-gray-400 text-sm mt-2">
+            <span>Github :</span>
+            <span className="text-green-400 text-md">
+              {" "}
+              {loggedUserData?.link}
+            </span>
+          </a>
+        )}
 
         {/* bio */}
-        <p className="text-gray-400 mt-2 text-md">
-          {" "}
-          <span>Bio :</span>
-          <span className="text-yellow-500"> {loggedUserData?.caption}</span>
-        </p>
+
+        {loggedUserData?.caption && (
+          <p className="text-gray-400 mt-2 text-md">
+            {" "}
+            <span>Bio :</span>
+            <span className="text-yellow-500"> {loggedUserData?.caption}</span>
+          </p>
+        )}
       </div>
       <div
         className="mt-4 flex w-full justify-center space-x-10

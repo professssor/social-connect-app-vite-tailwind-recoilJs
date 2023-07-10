@@ -156,7 +156,7 @@ function PostCard({
           <img
             className="h-12 w-12 rounded-full m-2"
             src={
-              loggedUserData?.avatar ||
+              avatar ||
               "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
             }
             alt="userAvatar"
