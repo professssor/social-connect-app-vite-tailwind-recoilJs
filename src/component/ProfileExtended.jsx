@@ -69,7 +69,10 @@ function ProfileExtended() {
         <div className="absolute h-[10rem] w-[10rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p- m-1">
           <img
             className="border-4 border-yellow-400 h-full w-full rounded-full"
-            src={loggedUserData?.avatar}
+            src={
+              loggedUserData?.avatar ||
+              "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
+            }
             alt="User Avatar"
           />
         </div>

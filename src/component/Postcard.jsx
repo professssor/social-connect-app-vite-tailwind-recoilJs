@@ -155,7 +155,10 @@ function PostCard({
         <div className="flex items-center w-full">
           <img
             className="h-12 w-12 rounded-full m-2"
-            src={avatar || loggedUserData?.avatar}
+            src={
+              loggedUserData?.avatar ||
+              "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
+            }
             alt="userAvatar"
           />
           <div className="flex flex-col">

@@ -66,7 +66,7 @@ function Post() {
     lg:w-[95%]"
     >
       <img
-        className=" h-12 w-12 lg:h-24 lg:w-24 rounded-full lg:rounded-3xl mt-3 ml-2 border-2 border-yellow-400"
+        className=" h-12 w-12 lg:h-24 lg:w-24 rounded-full lg:rounded-3xl mt-3 ml-2 border-2 border-yellow-400 "
         src={
           loggedUserData?.avatar ||
           "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
