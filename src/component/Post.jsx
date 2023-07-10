@@ -46,7 +46,8 @@ function Post() {
           user,
           token,
           selectedImageUrl,
-          selectedVideoUrl
+          selectedVideoUrl,
+          loggedUserData?.avatar
         );
       } catch (error) {
         console.log("Error posting the new post:", error);

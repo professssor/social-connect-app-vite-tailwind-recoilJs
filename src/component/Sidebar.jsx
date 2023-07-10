@@ -12,6 +12,10 @@ import bookmarkClicked from "../atom/bookmarkClicked";
 import PostAlert from "../atom/PostAlert";
 import OtherUsersProfileAtom from "../atom/OtherUsersProfileAtom";
 import LoggedUserProfileDataAtom from "../atom/LoggedUserProfileDataAtom";
+
+import ExploreIcon from "@mui/icons-material/Explore";
+import shouldFetchAtom from "../atom/ShouldFetchAtom";
+import PostsAtom from "../atom/PostsAtom";
 function Sidebar() {
   const [profileCardState, setProfileCardState] =
     useRecoilState(ProfileCardAtom);
@@ -23,7 +27,9 @@ function Sidebar() {
   const [loggedUserData, setLoggedUserData] = useRecoilState(
     LoggedUserProfileDataAtom
   );
+
   const navigate = useNavigate();
+  const [posts, setPosts] = useRecoilState(PostsAtom);
 
   return (
     // main container
@@ -45,7 +51,6 @@ function Sidebar() {
           <p
             onClick={() => {
               setProfileCardState(false);
-
               setOtherUserProfileState(false);
             }}
             className="optionContainer"
@@ -63,15 +68,16 @@ function Sidebar() {
         <p
           className="optionContainer"
           onClick={() => {
-            setProfileCardState(true);
+            setPosts((prev) => [...prev].reverse());
             navigate("/");
           }}
         >
-          <Person2Icon />
+          <ExploreIcon />
 
           <span className="hidden lg:navText">Explore</span>
         </p>
         {/* <p
+
           onClick={() => {
             navigate("/");
             setPostAlert(true);

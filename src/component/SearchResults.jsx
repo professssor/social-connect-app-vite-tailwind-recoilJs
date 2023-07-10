@@ -5,11 +5,15 @@ import OtherUserProfileDataAtom from "../atom/OtherUserProfileDataAtom";
 import ToggleProfileAtom from "../atom/ToggleProfileAtom";
 import SuggestionDataAtom from "../atom/SuggestionDataAtom";
 import { getuserById } from "../Services/userService";
+import ProfileCardAtom from "../atom/ProfileCardAtom";
 
 function SearchResults({ caption, name }) {
   const [otherUserProfileState, setOtherUserProfileState] = useRecoilState(
     OtherUsersProfileAtom
   );
+
+  const [profileCardState, setProfileCardState] =
+    useRecoilState(ProfileCardAtom);
   const [otherUserProfileDataState, setOtherUserProfileDataState] =
     useRecoilState(OtherUserProfileDataAtom);
   const [localUserList, setLocalUserList] = useState([]);
@@ -34,10 +38,10 @@ function SearchResults({ caption, name }) {
   const handleClick = () => {
     let clickedUser = localUserList.find((user) => user.username === name);
     setSuggestionDataState(clickedUser);
-
     setOtherUserProfileDataState(clickedUser);
     setOtherUserProfileState(true);
-    setToggleProfileState((prevState) => !prevState);
+    setProfileCardState(false);
+    setToggleProfileState(false);
   };
 
   return (

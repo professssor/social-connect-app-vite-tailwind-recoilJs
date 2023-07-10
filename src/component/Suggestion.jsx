@@ -71,18 +71,17 @@ function Suggestion() {
       console.log("Error toggling follow state: ", error);
     }
   };
-  console.log(otherUserProfileDataState);
 
   return (
     <div className="hidden lg:inline-flex flex-col w-[70%] justify-start space-y-6 mr-8 mt-6 h-[100vh] sticky top-6 self-start">
       <SearchComp />
       {!profileCardState && !otherUserProfileState && <ProfileCard />}
       <div className="text-center bg-[#161616] h-[50vh] w-full rounded-3xl">
-        <h2 className="text-lg font-semibold text-gray-500 text-center my-3 p-1">
+        <h2 className="text-lg font-semibold text-gray-500 text-center my-2 p-1">
           suggestion
         </h2>
         <div className="flex flex-col space-y-4 w-full items-center overflow-y-scroll h-[40vh]">
-          {userList?.map((suggestion) => {
+          {userList?.slice(1).map((suggestion) => {
             const { _id } = suggestion;
 
             const isFollowing = followState[_id] || false;
@@ -90,7 +89,7 @@ function Suggestion() {
             return (
               <div
                 key={suggestion._id}
-                className="flex items-center space-x-5 justify-between bg-[#282828] p-3 rounded-2xl w-[75%]"
+                className="flex items-center space-x-5 justify-between bg-[#282828] p-2 rounded-2xl w-[75%] "
               >
                 <img
                   className="h-8 w-8 rounded-full"
@@ -104,7 +103,6 @@ function Suggestion() {
                     setOtherUserProfileState(true);
                     setProfileCardState(false);
 
-                    setProfileCardState(false);
                     setToggleProfileState(false);
                   }}
                   className="text-yellow-400 cursor-pointer hover:underline"

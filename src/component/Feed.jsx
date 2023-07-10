@@ -1,26 +1,22 @@
 import React, { useEffect, useState } from "react";
 import PostCard from "./Postcard";
 import Post from "./Post";
-import { getAllPosts } from "../Services/PostService";
-import axios from "axios";
 
+import { getAllPosts } from "../Services/PostService";
 import { useRecoilState } from "recoil";
 import shouldFetchAtom from "../atom/ShouldFetchAtom";
 import { useAuth } from "../Services/AuthService";
-
 import EditViewAtom from "../atom/EditVIewAtom";
 import PostsAtom from "../atom/PostsAtom";
-import BookmarkPage from "./BookmarkPage";
 import bookmarkUpdateAtom from "../atom/bookmarkUpdateAtom";
 import ProfileCardAtom from "../atom/ProfileCardAtom";
 import BookmarkAtom from "../atom/BookmarkAtom";
-import { getBookmarkService, getuserById } from "../Services/userService";
 import ButtonContainer from "./ButtonContainer";
 
 function Feed() {
   const { user } = useAuth;
   const [posts, setPosts] = useRecoilState(PostsAtom);
-  const [users, setUsers] = useState([]);
+
   const [shouldFetch, setShouldFetch] = useRecoilState(shouldFetchAtom);
   const [editView, setEditView] = useRecoilState(EditViewAtom);
   const [profileCardState, setProfileCardState] =
@@ -79,7 +75,7 @@ function Feed() {
       {posts.map((post, index) => (
         <PostCard
           key={index}
-          id={post._id} // Assuming each post has a unique identifier like 'id'
+          id={post._id}
           video={post.video}
           username={post.username}
           date={post.date}

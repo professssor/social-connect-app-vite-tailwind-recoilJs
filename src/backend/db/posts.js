@@ -66,6 +66,7 @@ export const posts = [
     // image: "post6.jpg",
     likes: { likeCount: 0, likedBy: Array(0), dislikedBy: Array(0) },
     caption: "Just finished reading an amazing book. #reading #booklover",
+    image: "https://picsum.photos/200/300?grayscale",
   },
   {
     _id: uuid(),
@@ -104,5 +105,39 @@ export const posts = [
     // image: "post10.jpg",
     likes: { likeCount: 0, likedBy: Array(0), dislikedBy: Array(0) },
     caption: "Weekend vibes. #weekend #relaxation",
+
+    image: "https://picsum.photos/seed/picsum/200/300",
+  },
+  {
+    _id: uuid(),
+    avatar: "https://randomuser.me/api/portraits/lego/0.jpg",
+    username: "sapphire21",
+    date: "July 1, 2023",
+    likes: { likeCount: 0, likedBy: [], dislikedBy: [] },
+    caption: "Exploring new horizons. #adventure",
+  },
+  {
+    _id: uuid(),
+    avatar: "https://randomuser.me/api/portraits/lego/1.jpg",
+    username: "crimson95",
+    date: "July 2, 2023",
+    likes: { likeCount: 0, likedBy: [], dislikedBy: [] },
+    caption: "Capturing beautiful moments. #photography",
+  },
+  {
+    _id: uuid(),
+    avatar: "https://randomuser.me/api/portraits/lego/2.jpg",
+    username: "amberwaves",
+    date: "July 3, 2023",
+    likes: { likeCount: 0, likedBy: [], dislikedBy: [] },
+    caption: "Chasing dreams and making memories. #wanderlust",
+  },
+  {
+    _id: uuid(),
+    avatar: "https://randomuser.me/api/portraits/lego/3.jpg",
+    username: "midnight_stars",
+    date: "July 4, 2023",
+    likes: { likeCount: 0, likedBy: [], dislikedBy: [] },
+    caption: "Embracing the night sky. ✨ #stargazing",
   },
 ];

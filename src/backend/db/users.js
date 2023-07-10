@@ -18,20 +18,6 @@ export const users = [
     link: "https://github.com/professssor",
     createdAt: formatDate(),
     updatedAt: formatDate(),
-    followers: [],
-    following: [
-      {
-        _id: uuid(),
-        firstName: "donald",
-        avatar: "https://randomuser.me/api/portraits/lego/4.jpg",
-        lastName: "trump",
-        email: "football@neog.camp",
-        username: "donaldtrump",
-        password: "football",
-        createdAt: formatDate(),
-        updatedAt: formatDate(),
-      },
-    ],
   },
   {
     _id: uuid(),
