@@ -56,7 +56,7 @@ function Login() {
 
           <button
             onClick={(event) =>
-              handleLogin(event, "adarshbalika", "adarshBalika")
+              handleLogin(event, "San", "San")
             }
             type="submit"
             className="block bg-black text-white px-[2rem] py-[.8rem] rounded hover:bg-white hover:text-black border-gray-600 border-[1px] m-auto mt-4 "
