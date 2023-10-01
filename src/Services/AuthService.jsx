@@ -45,8 +45,8 @@ const AuthProvider = ({ children }) => {
 
     try {
       const res = await axios.post("/api/auth/login", {
-        username: username === "San" ? "San": username,
-        password: password === "San"? "San": password,
+        username: username === "adarshbalika" ? "adarshbalika": username,
+        password: password === "adarshbalika"? "adarshbalika": password,
       });
 
       localStorage.setItem("token", res?.data?.encodedToken);
